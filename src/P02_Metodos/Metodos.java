@@ -3,6 +3,11 @@ package P02_Metodos;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/*
+ * 
+ * Clase con ejemplos de metodos 
+ * 
+ */
 public class Metodos {
 
 	public static void main(String[] args) {
@@ -14,11 +19,11 @@ public class Metodos {
 
 			f1.write("Que es el cipotegato");
 			f1.close();
-			//ejemplo
-			//ejercicio01
-			//ejemplos
+			
 			}catch(IOException ex){
+				
 				System.out.println("error al acceder al fichero");
+				
 				}
 		
 	}
