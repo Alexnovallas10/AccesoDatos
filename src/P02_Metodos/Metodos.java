@@ -16,7 +16,7 @@ public class Metodos {
 		try {
 			FileWriter f1 = new FileWriter("C:\\Users\\ifc\\Documents\\f1.txt");
 			System.out.println(f1.getEncoding());
-
+			//Primer ejercicio
 			f1.write("Que es el cipotegato");
 			f1.close();
 			
