@@ -9,7 +9,7 @@ public class CrearFichero {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		File f1 = new File ("C:\\Users\\ifc\\Documents\\f1.txt");
+		File f1 = new File ("D:\\alex\\Acceso a datos\\f1.txt");
 		
 		if (f1.exists()){
 			System.out.println("El fichero ya existe");
