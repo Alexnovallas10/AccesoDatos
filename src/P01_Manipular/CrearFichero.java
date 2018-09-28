@@ -9,18 +9,20 @@ public class CrearFichero {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		try {
-		FileWriter f1 = new FileWriter("C:\\Users\\ifc\\Documents\\f1.txt");
+		File f1 = new File ("C:\\Users\\ifc\\Documents\\f1.txt");
 		
-		String dir = "C:\\Users\\ifc\\Documents";
-		
-		FileWriter f2 = new FileWriter(dir);
+		if (f1.exists()){
+			System.out.println("El fichero ya existe");
+		}else {
+			try {
+				
+				f1.createNewFile();
 
-	
-		}catch(IOException ex){
-			System.out.println("error al acceder al fichero");
+			}catch(IOException e) {
+				System.out.println(e.getMessage());
 			}
-		
+		}
+
 	}
 
 }
