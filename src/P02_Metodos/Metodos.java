@@ -110,13 +110,18 @@ public class Metodos {
 			}
 			
 			//renombrar un fichero 
+			File f10 = new File("D:\\alex\\Acceso_a_datos\\AD_01_Ficheros\\TBBT\\howard.txt");
+			f10.renameTo(new File(f5,"Bernadet.txt"));
 			
-			
-			
-			
-			
-			
+			//borrar un fichero
 
+			if(f6.delete()){
+				System.out.println("El fichero se ha borrado");
+			}else {
+				System.out.println("El fichero no se ha borrado");
+			}
+			
+	
 		}else {
 			System.out.println("La ruta al fichero es invalida");
 		}
