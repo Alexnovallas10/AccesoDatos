@@ -9,6 +9,7 @@ public class LeerEscribirBytes {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		//leer y escribir bytes
 		
 		File f1 = new File("D:\\alex\\Acceso_a_datos\\AD_01_Ficheros\\datos.dat");
 		f1.createNewFile();
@@ -25,6 +26,7 @@ public class LeerEscribirBytes {
 		while((i=filein.read())!=-1){
 			System.out.println(i);
 		}
+		
 		filein.close();
 
 	}
