@@ -35,13 +35,7 @@ public class Leer_escribir_objetos {
 			edades[i]=teclado.nextInt();
 			
 		}
-		
-		
-		
-		
-		
-	
-		
+
 		for(i=0;i<5;i++) {
 			p1 = new Persona(edades[i], nombres[i]);
 			obout.writeObject(p1);
@@ -53,8 +47,7 @@ public class Leer_escribir_objetos {
 		FileInputStream filein = new FileInputStream(f);
 		ObjectInputStream obin = new ObjectInputStream(filein);
 		
-		
-		int e;
+
 		
 		
 		try {
