@@ -25,19 +25,19 @@ public class Leer_escribir_objetos {
 		Persona p1;
 		int i;
 		
-		String[] nombres = new String[10];
+		String[] nombres = new String[5];
+		int[] edades = new int[5];
+
 		for(i=0;i<5;i++) {
 			System.out.println("Introduce el nombre de la persona: ");	
-			nombres[i]=teclado.nextLine();
+			nombres[i]=teclado.next();
+			System.out.println("Introduce la edad de la persona: ");	
+			edades[i]=teclado.nextInt();
 			
 		}
 		
 		
-		int[] edades = new int[10];
-		for(i=0;i<5;i++) {
-			System.out.println("Introduce la edad de la persona: ");	
-			edades[i]=teclado.nextInt();
-		}
+		
 		
 		
 	
