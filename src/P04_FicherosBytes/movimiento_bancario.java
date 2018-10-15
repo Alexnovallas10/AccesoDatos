@@ -1,11 +1,12 @@
 package P04_FicherosBytes;
+import java.io.Serializable;
 
-public class movimiento_bancario {
+public class movimiento_bancario implements Serializable{
 	
-	String fecha;
-	String concepto;
-	int cantidad;
-	boolean tipo;
+	private String fecha;
+	private String concepto;
+	private int cantidad;
+	private boolean tipo;
 	
 	
 	public movimiento_bancario(String f, String c, int can, boolean t) {
@@ -21,15 +22,15 @@ public class movimiento_bancario {
 	}
 	
 	public String getconcepto() {
-		return "Concepto: "+concepto; 
+		return " Concepto: "+concepto; 
 	}
 	
-	public String getcantidad() {
-		return "Cantidad: "+cantidad; 
+	public int getcantidad() {
+		return cantidad; 
 	}
 	
-	public String gettipo() {
-		return "Tipo: "+tipo; 
+	public boolean gettipo() {
+		return tipo; 
 	}
 	
 	public void setfecha(String f) {
