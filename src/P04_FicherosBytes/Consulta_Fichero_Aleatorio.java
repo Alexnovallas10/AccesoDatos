@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.Scanner;
 
 public class Consulta_Fichero_Aleatorio {
 
@@ -14,7 +15,13 @@ public class Consulta_Fichero_Aleatorio {
 
 		RandomAccessFile raf = new RandomAccessFile(f, "r");
 		
-		int id = 5;
+		Scanner teclado = new Scanner(System.in);
+
+		int id;
+		System.out.print("Introduzca un número de Id: ");
+		id = teclado.nextInt();
+		
+		
 		int posicion = (id-1)*36;//restamos una para empezar a leer la siguiente posicion
 		
 		
@@ -42,6 +49,7 @@ public class Consulta_Fichero_Aleatorio {
 
 		System.out.println("Id: "+id+" Apellido: "+apellido+" Departamento: "+dpto+" Salario: "+salario);
 
+		raf.close();
 	}
 
 }
