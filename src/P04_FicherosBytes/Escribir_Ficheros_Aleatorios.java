@@ -14,8 +14,7 @@ public class Escribir_Ficheros_Aleatorios {
 
 		//el modo rw si no existe el fichero lo crea
 		RandomAccessFile raf = new RandomAccessFile(f, "rw");
-		
-		StringBuffer sbuf = null;
+	
 
 		String[] apellidos = new String[10];
 		apellidos[0]="Royo";
@@ -53,6 +52,8 @@ public class Escribir_Ficheros_Aleatorios {
 		salario[8]=1900;
 		salario[9]=1700;
 		
+		
+		StringBuffer sbuf = null;
 		
 		for(int i=0;i<10;i++) {
 			raf.writeInt(i+1);
