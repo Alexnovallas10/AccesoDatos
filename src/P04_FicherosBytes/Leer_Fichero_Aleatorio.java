@@ -25,7 +25,7 @@ public class Leer_Fichero_Aleatorio {
 		double salario;
 
 		try {
-			for(;;) {
+			do {
 				
 				raf.seek(posicion);//nos sitia en el lugar determinado del fichiero para empezar a leer datos
 				 
@@ -45,16 +45,12 @@ public class Leer_Fichero_Aleatorio {
 
 				System.out.println("Id: "+id+" Apellido: "+apellido+" Departamento: "+dpto+" Salario: "+salario);
 
-				
-				
 				posicion+=36;
 				
+				}while(raf.getFilePointer()!=raf.length());
 				//donde esta apuntando el puntero, el length nos indica la cantidad de bytes que contiene
-				if(raf.getFilePointer()==raf.length()) 
-				break;
-					
-				
-				}
+
+			
 			raf.close();
 		
 	}catch (EOFException e) {
