@@ -12,7 +12,6 @@ public class Leer_Fichero_Aleatorio {
 		// TODO Auto-generated method stub
 		
 		File f = new File("D:\\alex\\Acceso_a_datos\\AD_01_Ficheros\\ficherosAleatorios.dat");
-
 		RandomAccessFile raf = new RandomAccessFile(f, "r");
 
 		
