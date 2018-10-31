@@ -1,29 +1,21 @@
 package P05_FicherosXML;
 
-import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.ObjectInputStream;
-import java.io.RandomAccessFile;
+import org.w3c.dom.*;
+import javax.xml.parsers.*;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.*;
+import javax.xml.transform.stream.*;
+import java.io.*;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.DOMImplementation;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-import P04_FicherosBytes.Persona;
 
 public class CrearCancionXML {
 	
 /**
  * 
  * @param args
- * @throws FileNotFoundException
+ * @throws IOException 
  */
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 		File fichero = 
@@ -32,7 +24,7 @@ public class CrearCancionXML {
 		FileInputStream filein = new FileInputStream(fichero);
 		ObjectInputStream obin = new ObjectInputStream(filein);		
 		
-		int  id, anio, posicion=0; //para situarnos al principio del fichero        
+		int  id = 0, anio = 0, posicion=0; //para situarnos al principio del fichero        
 		char titulo[] = new char[10], aux;
 		char artista[] = new char[10];		
 		char duracion[] = new char[10];
@@ -52,29 +44,31 @@ public class CrearCancionXML {
 		     document.setXmlVersion("1.0"); 
 		   
 		 	
-				try {
-					while(true) {
-						for(int i=0;i<5;i++) {
-							c=(cancion)obin.readObject();
+			try {
+				while(true) {
+					for(int i=0;i<5;i++) {
+						c=(cancion)obin.readObject();
 							
-							if(id>0) {
+						if(c.getId()>0) {
 								   
-								 Element raiz = 
-						                   document.createElement("cancion"); //nodo empleado
-						         document.getDocumentElement().appendChild(raiz); 
+							Element raiz = 
+						        document.createElement("cancion"); //nodo empleado
+						        document.getDocumentElement().appendChild(raiz); 
 						        
 						         // ID                       
-						         CrearElemento("id",Integer.toString(id), raiz, document); 
-						         // Apellido
-						         CrearElemento("año",Integer.toString(anio), raiz, document); 
+						    CrearElemento("id",Integer.toString(id), raiz, document); 
+						    // Apellido
+						    CrearElemento("año",Integer.toString(anio), raiz, document); 
 						         // Dpto
-						         CrearElemento("Titulo",c.getTitulo().trim(), raiz, document); 
+						    CrearElemento("Titulo",c.getTitulo().trim(), raiz, document); 
 						         // Salario
-						         CrearElemento("Artista",c.getArtista().trim(), raiz, document); 
+						    CrearElemento("Artista",c.getArtista().trim(), raiz, document); 
 
-						         CrearElemento("Duracion",c.getDuracion().trim(), raiz, document); 
-
-						                                                          
+						    CrearElemento("Duracion",c.getDuracion().trim(), raiz, document); 
+						         //origen
+						    String bo= String.valueOf(c.getD());
+						    CrearElemento("Origen",bo.trim(), raiz, document); 
+                                                 
 							 }
 						}
 					}
@@ -83,40 +77,31 @@ public class CrearCancionXML {
 					System.out.println("");
 				}
 		     
-		     
-		     
-		     
-		     
-		     
-		     
-		     
-		     
-		     
-		     
-		     
-				
+
 		     Source source = new DOMSource(document);
 		     Result result
-		     = new StreamResult(new java.io.File("canciones.xml"));        
+		     = new StreamResult(new java.io.File("D:\\alex\\Acceso_a_datos\\AD_01_Ficheros\\canciones.xml"));        
 		     Transformer transformer
 		     = TransformerFactory.newInstance().newTransformer();
 		     transformer.transform(source, result); 
 		     // se transforma el documento al fichero
 		    
 		    // MOSTRAR EL DOCUMENTO POR CONSOLA
-		    // Result console = new StreamResult(System.out);
-		    // transformer.transform(source, console);	   
+		    Result console = new StreamResult(System.out);
+		    transformer.transform(source, console);	   
 			   
 		    }catch(Exception e){ System.err.println("Error: "+ e); }
 		    
-		    file.close();  //cerrar fichero 	
+		    
 		 }
 
-private static void CrearElemento(String string, String string2, Element raiz, Document document) {
-	// TODO Auto-generated method stub
-	
+	static void  CrearElemento(String datoEmple, String valor,
+            Element raiz, Document document){
+		Element elem = document.createElement(datoEmple); 
+		Text text = document.createTextNode(valor); //damos valor
+		raiz.appendChild(elem); //pegamos el elemento hijo a la raiz
+		elem.appendChild(text); //pegamos el valor		 	
 }
-
 		
 
 	}
