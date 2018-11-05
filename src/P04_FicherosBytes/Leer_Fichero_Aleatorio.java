@@ -54,8 +54,8 @@ public class Leer_Fichero_Aleatorio {
 		
 	}catch (EOFException e) {
 		System.out.println("Se ha llegado al final del fichero");
-	}
+		}
 
-}
+	}
 	
 }

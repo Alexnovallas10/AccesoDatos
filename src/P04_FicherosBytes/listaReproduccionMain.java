@@ -17,9 +17,8 @@ public class listaReproduccionMain {
 		int i = 5 ;
 		
 		System.out.println("1.- Generar fichero");
-		System.out.println("1.- Insertar datos de la cancion");
-		System.out.println("2.- Consultar datos de cancion");
-		System.out.println("3.- Insertar informacion en el fichero");
+		System.out.println("2.- Insertar datos de la cancion");
+		System.out.println("3.- Consultar datos de cancion");
 		System.out.println("4.- Modificar año de la cancion");		
 		System.out.println("5.- Borrar informacion");
 		System.out.println("6.- Mostrar ID de canciones borradas");
@@ -35,9 +34,12 @@ public class listaReproduccionMain {
     	String titulo, artista, duracion;
     	boolean bo;
     	
-		char[] titulos = new char[5];
-		char[] artistas = new char[5];
+		char[] titulos = new char[10];
+		char[] artistas = new char[10];
 		char[] duraciones = new char[5];
+		
+		long posicion = 0;
+		char aux;
 
     	
     	listaReproduccion l = new listaReproduccion();
@@ -51,7 +53,7 @@ public class listaReproduccionMain {
             	    System.out.println("Introduce el Id: ");
             	    id=teclado.nextInt();
             	    
-            	    if(l.Existeid(id)==false) {
+            	    if(!l.Existeid(id)) {
             	    	
             	    System.out.println("Introduce el año: ");
             	    anio=teclado.nextInt();
@@ -67,7 +69,8 @@ public class listaReproduccionMain {
             	    
             	    l = new listaReproduccion(id, anio, titulo, artista, duracion, bo);
 
-            	    
+            	    posicion=raf.length();
+            	    raf.seek(posicion);
             	  
             	    raf.writeInt(id);
             	    raf.writeInt(anio);
@@ -90,20 +93,13 @@ public class listaReproduccionMain {
                      break;
             case 3:              	    
             	System.out.println("Introduce el id de la cancion: ");
-            	id=teclado.nextInt();
-            	
-        		int posicion = 0;
-        		char aux;
-
-            	try {
-        			do {
-        				
-        				raf.seek(posicion);//nos sitia en el lugar determinado del fichiero para empezar a leer datos
-        				 
-        				id=raf.readInt();
-        				
+            	id=teclado.nextInt();            	
+        			        					
+        		if(l.Existeid(id)) {
+        				posicion=(id-1)*69;
+        				raf.seek(posicion);//nos sitia en el lugar determinado del fichiero para empezar a leer datos 
+        				id=raf.readInt();		
         				anio=raf.readInt();
-
         				
         				for(int b=0; b<titulos.length; b++) {
         					 aux = raf.readChar();
@@ -128,34 +124,41 @@ public class listaReproduccionMain {
         				
         				bo=raf.readBoolean();
         				
-        				
-
         				System.out.println("Id: "+id+" Año: "+anio+" Titulo: "+titulo+" Artista: "+artista+" Duracion:"+duracion);
 
-        				posicion+=69;
         				
-        				}while(raf.getFilePointer()!=raf.length());
-        				//donde esta apuntando el puntero, el length nos indica la cantidad de bytes que contiene
+        					}
 
-        			
         			raf.close();
-        		
-        	}catch (EOFException e) {
-        		System.out.println("Se ha llegado al final del fichero");
-        	}
-            	
-
+        
+	
+        	   
             	
             	
             	
             		break;
             case 4:  
+            	System.out.println("Introduce el id de la cancion para cambiar su año: ");
+            	id=teclado.nextInt();            	
+
+            	
+            	
+            	
+            	
+            	
+            	
+            	
+            	
+            	
+            	
             		break;
             case 5:  
                 	break;
             case 6:
             		break;
             case 7:
+            	
+            	
         		break;
         		}
 
