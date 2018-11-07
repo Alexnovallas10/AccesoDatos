@@ -58,16 +58,16 @@ public class CrearCancionXML {
 						         // ID                       
 						    CrearElemento("id",Integer.toString(id), raiz, document); 
 						    // Apellido
-						    CrearElemento("año",Integer.toString(anio), raiz, document); 
+						    CrearElemento("anio",Integer.toString(anio), raiz, document); 
 						         // Dpto
-						    CrearElemento("Titulo",c.getTitulo().trim(), raiz, document); 
+						    CrearElemento("titulo",c.getTitulo().trim(), raiz, document); 
 						         // Salario
-						    CrearElemento("Artista",c.getArtista().trim(), raiz, document); 
+						    CrearElemento("artista",c.getArtista().trim(), raiz, document); 
 
-						    CrearElemento("Duracion",c.getDuracion().trim(), raiz, document); 
+						    CrearElemento("duracion",c.getDuracion().trim(), raiz, document); 
 						         //origen
 						    String bo= String.valueOf(c.getD());
-						    CrearElemento("Origen",bo.trim(), raiz, document); 
+						    CrearElemento("origen",bo.trim(), raiz, document); 
                                                  
 							 }
 						}

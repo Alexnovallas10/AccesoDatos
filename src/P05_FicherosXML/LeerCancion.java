@@ -24,6 +24,7 @@ public class LeerCancion {
 	    List<cancion> ListaCancion = new ArrayList<cancion>();
 		ListaCancion = listadoTodas.getListaCanciones();
 				        
+		
 	    Iterator <cancion> iterador = ListaCancion.listIterator(); 
 	    while( iterador.hasNext() ) {
 		    cancion c = (cancion) iterador.next(); 
