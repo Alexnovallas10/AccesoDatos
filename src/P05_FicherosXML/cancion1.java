@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.Serializable;
 
-public class cancion implements Serializable {
+public class cancion1 implements Serializable {
 	
 	int id, anio;
 	String titulo, artista, duracion;
 	boolean bo;
 	
-	public cancion (int i, int an, String t, String art, String dur,  boolean b) {
+	public cancion1 (int i, int an, String t, String art, String dur,  boolean b) {
 		
 		this.id=i;
 		this.anio=an;
@@ -22,7 +22,7 @@ public class cancion implements Serializable {
 		this.bo=b;
 	}
 		
-	public cancion () {
+	public cancion1 () {
 		
 	}
 

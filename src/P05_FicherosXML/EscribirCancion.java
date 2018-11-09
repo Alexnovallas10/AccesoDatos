@@ -24,7 +24,7 @@ public class EscribirCancion {
 	    try {
 	      while (true) { //lectura del fichero
 	          //leer una Persona
-		    cancion Cancion= (cancion) dataIS.readObject();    
+		    cancion1 Cancion= (cancion1) dataIS.readObject();    
 		    listacan.add(Cancion); //a�adir cancion a la lista  
 	      }	
 	    }catch (EOFException eo) {}

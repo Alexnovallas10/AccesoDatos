@@ -5,16 +5,16 @@ import java.util.List;
 
 public class listaCancion {
 	
-    private List<cancion> lista = new ArrayList<cancion>();
+    private List<cancion1> lista = new ArrayList<cancion1>();
     
     public listaCancion(){    	
     }
 
-    public void add(cancion c) {
+    public void add(cancion1 c) {
             lista.add(c);
     }
    
-   public List<cancion> getListaCanciones() {
+   public List<cancion1> getListaCanciones() {
             return lista;
     }
 

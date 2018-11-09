@@ -21,13 +21,13 @@ public class GenerarCancion {
 		FileOutputStream fileout = new FileOutputStream(f);
 		ObjectOutputStream obout = new ObjectOutputStream(fileout);
 		
-		cancion c[] = new cancion[5];
+		cancion1 c[] = new cancion1[5];
 		
-		c[0] = new cancion(1,1997,"Buenos dias", "Juan", "180 segundos",false);	
-		c[1] = new cancion(2,1995,"Buenas noches", "Pedro", "210 segundos",true);		
-		c[2] = new cancion(3,2010,"Buenas tardes", "Lucas", "150 segundos",false);		
-		c[3] = new cancion(4,2014,"hola que tal", "Luis", "120 segundos",true);		
-		c[4] = new cancion(5,2017,"Bien", "Angel", "320 segundos",false);		
+		c[0] = new cancion1(1,1997,"Buenos dias", "Juan", "180 segundos",false);	
+		c[1] = new cancion1(2,1995,"Buenas noches", "Pedro", "210 segundos",true);		
+		c[2] = new cancion1(3,2010,"Buenas tardes", "Lucas", "150 segundos",false);		
+		c[3] = new cancion1(4,2014,"hola que tal", "Luis", "120 segundos",true);		
+		c[4] = new cancion1(5,2017,"Bien", "Angel", "320 segundos",false);		
 
 		
 	

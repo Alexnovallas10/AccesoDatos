@@ -29,7 +29,7 @@ public class CrearCancionXML {
 		char artista[] = new char[10];		
 		char duracion[] = new char[10];
 
-		cancion c;
+		cancion1 c;
 		     
 		// Instancia para construir el parser
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -47,7 +47,7 @@ public class CrearCancionXML {
 			try {
 				while(true) {
 					for(int i=0;i<5;i++) {
-						c=(cancion)obin.readObject();
+						c=(cancion1)obin.readObject();
 							
 						if(c.getId()>0) {
 								   

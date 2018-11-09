@@ -21,14 +21,14 @@ public class LeerCancion {
 	    System.out.println("Numero de Canciones: " + 
 	         listadoTodas.getListaCanciones().size());
 				       
-	    List<cancion> ListaCancion = new ArrayList<cancion>();
+	    List<cancion1> ListaCancion = new ArrayList<cancion1>();
 		ListaCancion = listadoTodas.getListaCanciones();
 				        
 		
-	    Iterator <cancion> iterador = ListaCancion.listIterator(); 
+	    Iterator <cancion1> iterador = ListaCancion.listIterator(); 
 	    while( iterador.hasNext() ) {
-		    cancion c = (cancion) iterador.next(); 
-		    System.out.printf("ID: "+c.getId()+"Año: "+c.getAnio()+"Titulo: "+c.getTitulo()+" Artista: "+ c.getArtista()+"Duracion: "+c.getDuracion()+c.getD());
+		    cancion1 c = (cancion1) iterador.next(); 
+		    System.out.printf("ID: "+c.getId()+"Aï¿½o: "+c.getAnio()+"Titulo: "+c.getTitulo()+" Artista: "+ c.getArtista()+"Duracion: "+c.getDuracion()+c.getD());
 	                                 
 	    }    
 	    System.out.println("Fin de listado .....");
