@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE xml>
 <ventasarticulos>
     <articulo>
         <codigo>ART-112</codigo>
@@ -31,6 +30,12 @@
             <unidades>10</unidades>
             <nombrecliente>Cliente 1</nombrecliente>
             <fecha>16-12-2018</fecha>
+        </venta>
+        <venta>
+            <numventa>35</numventa>
+            <unidades>12</unidades>
+            <nombrecliente>Cliente 2</nombrecliente>
+            <fecha>25-11-2019</fecha>
         </venta>
     </ventas>
 </ventasarticulos>
