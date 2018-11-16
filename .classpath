@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-impl.jar"/>
 	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-jxc.jar"/>
 	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ifc/git/AccesoDatos/Unidad2/Ejercicio1/librerias/sqlite-jdbc-3.23.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
