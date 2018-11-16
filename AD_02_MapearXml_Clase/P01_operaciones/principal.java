@@ -14,15 +14,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import P07_Mapearxml_clase.DatosArtic;
-import P07_Mapearxml_clase.ObjectFactory;
-import P07_Mapearxml_clase.Ventas;
-import P07_Mapearxml_clase.VentasType;
-import P07_Mapearxml_clase.Ventas.Venta;
 import jabxClases.*;
-
-
-
+import jabxClases.Ventas.Venta;
 
 
 public class principal {
