@@ -1,10 +1,10 @@
-package Ejercicio1;
+package Conectores;
 
 import java.sql.*;
 
 public class AC1_mysql {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 	    
 	    System.out.println("Iniciando");
 	    
