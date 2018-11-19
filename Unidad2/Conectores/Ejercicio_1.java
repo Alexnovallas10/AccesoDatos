@@ -66,6 +66,7 @@ public class Ejercicio_1 {
 	  public static void mostrar() {
 		  
 		  
+		  
 	  }
 	  
 	 
