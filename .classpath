@@ -5,14 +5,14 @@
 	<classpathentry kind="src" path="AD_02_MapearXml_Clase"/>
 	<classpathentry kind="src" path="Unidad1"/>
 	<classpathentry kind="src" path="Unidad2"/>
-	<classpathentry kind="lib" path="C:/Users/ifc/Downloads/xstream-1.4.11.1/lib/xstream-1.4.11.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ifc/Downloads/xstream-1.4.11.1/lib/xstream/kxml2-min-2.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-api.jar"/>
-	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-core.jar"/>
-	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-impl.jar"/>
-	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-jxc.jar"/>
-	<classpathentry kind="lib" path="D:/Archivos de programa/workspace/AD_01_Ficheros/Librerias/jaxb-xjc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ifc/git/AccesoDatos/Unidad2/Ejercicio1/librerias/sqlite-jdbc-3.23.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ifc/git/AccesoDatos/Unidad2/Ejercicio1/librerias/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="Librerias/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="Librerias/jaxb-core.jar"/>
+	<classpathentry kind="lib" path="Librerias/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="Librerias/jaxb-jxc.jar"/>
+	<classpathentry kind="lib" path="Librerias/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="Unidad2/Ejercicio1/librerias/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="Unidad2/Ejercicio1/librerias/sqlite-jdbc-3.23.1.jar"/>
+	<classpathentry kind="lib" path="Librerias/kxml2-min-2.3.0.jar"/>
+	<classpathentry kind="lib" path="Librerias/xstream-1.4.11.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
