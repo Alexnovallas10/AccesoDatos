@@ -8,7 +8,7 @@ public class EscribirCancion {
 	public static void main(String[] args)
 	          throws IOException, ClassNotFoundException {   	
 	    
-			File fichero = new File("D:\\alex\\Acceso_a_datos\\AD_01_Ficheros\\canciones.dat");
+			File fichero = new File("Unidad1/P05_FicherosXML/listacanciones.xml");
 	   		FileInputStream filein = new 
 	               FileInputStream(fichero);//flujo de entrada   
 	    
