@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Canciones>
+    <listaCancion>
+        <id>1</id>
+        <anio>2006</anio>
+        <titulo>Hola</titulo>
+        <artista>Juan</artista>
+        <duracion>120</duracion>
+        <bo>true</bo>
+    </listaCancion>
+    <listaCancion>
+        <id>2</id>
+        <anio>2018</anio>
+        <titulo>holahola</titulo>
+        <artista>Luis</artista>
+        <duracion>90</duracion>
+        <bo>false</bo>
+    </listaCancion>
+</Canciones>
