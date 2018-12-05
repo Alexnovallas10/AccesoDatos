@@ -16,6 +16,7 @@ public class ExamenAD {
 		System.out.println("¿Como quieres llamar al fichero?");
 		nombre = teclado.nextLine();
 		
+		
 		System.out.println(" 1 numero");
 		a = teclado.nextInt();
 		System.out.println(" 2 numero");

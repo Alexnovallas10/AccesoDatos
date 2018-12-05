@@ -75,6 +75,7 @@ public class ExamenAD2 {
 	}	
 	
 	public static void subirsueldo (String depa, String subid) {
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); 
 			Connection conexion = DriverManager.getConnection(
