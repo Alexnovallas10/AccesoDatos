@@ -5,14 +5,18 @@
 	<classpathentry kind="src" path="AD_02_MapearXml_Clase"/>
 	<classpathentry kind="src" path="Unidad1"/>
 	<classpathentry kind="src" path="Unidad2"/>
+	<classpathentry kind="src" path="Unidad3_HerramientasDeMapeoObjetoRelacional"/>
+	<classpathentry kind="src" path="ExamenAccesoDatosAlex"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-api.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-core.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-impl.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-jxc.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-xjc.jar"/>
-	<classpathentry kind="lib" path="Unidad2/Ejercicio1/librerias/mysql-connector-java-8.0.13.jar"/>
-	<classpathentry kind="lib" path="Unidad2/Ejercicio1/librerias/sqlite-jdbc-3.23.1.jar"/>
 	<classpathentry kind="lib" path="Librerias/kxml2-min-2.3.0.jar"/>
 	<classpathentry kind="lib" path="Librerias/xstream-1.4.11.1.jar"/>
+	<classpathentry kind="lib" path="Unidad2/librerias/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="Unidad2/librerias/sqlite-jdbc-3.23.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ifc/git/AccesoDatos/Unidad2/librerias/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ifc/git/AccesoDatos/Unidad2/librerias/sqlite-jdbc-3.23.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
