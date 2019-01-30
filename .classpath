@@ -7,6 +7,7 @@
 	<classpathentry kind="src" path="Unidad2"/>
 	<classpathentry kind="src" path="Unidad3_HerramientasDeMapeoObjetoRelacional"/>
 	<classpathentry kind="src" path="ExamenAccesoDatosAlex"/>
+	<classpathentry kind="src" path="AD_04_BDOO"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-api.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-core.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-impl.jar"/>
@@ -18,5 +19,6 @@
 	<classpathentry kind="lib" path="Unidad2/librerias/sqlite-jdbc-3.23.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ifc/git/AccesoDatos/Unidad2/librerias/mysql-connector-java-8.0.13.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ifc/git/AccesoDatos/Unidad2/librerias/sqlite-jdbc-3.23.1.jar"/>
+	<classpathentry kind="lib" path="AD_04_BDOO/lib/neodatis-odb-1.9.30.689.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
