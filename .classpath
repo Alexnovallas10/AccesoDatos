@@ -8,6 +8,8 @@
 	<classpathentry kind="src" path="Unidad3_HerramientasDeMapeoObjetoRelacional"/>
 	<classpathentry kind="src" path="ExamenAccesoDatosAlex"/>
 	<classpathentry kind="src" path="AD_04_BDOO"/>
+	<classpathentry kind="src" path="Unidad_05_NoSQL"/>
+	<classpathentry kind="src" path="Unidad_06_Componentes"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-api.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-core.jar"/>
 	<classpathentry kind="lib" path="Librerias/jaxb-impl.jar"/>
