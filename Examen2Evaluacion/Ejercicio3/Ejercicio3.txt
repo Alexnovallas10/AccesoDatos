@@ -1,0 +1,21 @@
+//ejercicio1
+
+db.jugadores.aggregate(
+   [
+      { $project: { NombreApellido: { $concat: [ "$firstName", " - ", "$lastName" ] } } }
+   ]
+)
+
+//EJer 2. Edad actual en años de cada jugador.
+
+db.jugadores.aggregate( [ { $project: { edad: { $subtract: [ {2019},{ $year: {$dateOfBirthUTC ] }, "$discount"} ] } } } ] )
+
+
+
+//Ejer 3
+
+
+
+//Ejer4
+
+mongoexport --collection nba --out nba.json
