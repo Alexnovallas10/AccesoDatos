@@ -34,7 +34,8 @@ public class Principal {
 				Ventas ven= objects.next();
 			     
 			      // Imprimo las propiedades que me interes de ese objeto
-			      System.out.println((i++) +  + ven.getCodventa() );
+			      System.out.println((i++)  + ven.getCodventa() + ven.getCodarti().getCodarti() + " "+ ven.getCodarti().getDenom() + 
+							"  Stock: " + ven.getCodarti().getStock() + "  Pvp: " + ven.getCodarti().getPvp() );
 			} // Fin del While
 			bd.close();
 
