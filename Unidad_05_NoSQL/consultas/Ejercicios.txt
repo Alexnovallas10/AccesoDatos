@@ -1,4 +1,4 @@
-1-Importar el contenido de cada fichero (el fichero es una colección) de jugadores, entrenadores y equipos.
+1-Importar el contenido de cada fichero (el fichero es una colecciï¿½n) de jugadores, entrenadores y equipos.
 
 mongoimport --host localhost --port 27017 --db nba --collection entrenadores --file D:\alex\Acceso_a_datos\nba\entrenadores.json
 
@@ -10,16 +10,16 @@ mongoimport --host localhost --port 27017 --db nba --collection entrenadores --f
 
 db.jugadores.find({"teamId": "1610612747"}).pretty()
 
-3-Consultar los jugadores españoles
+3-Consultar los jugadores espaï¿½oles
 
 db.jugadores.find({"country":"Spain"}).pretty()
 
 
-4-Consultar los jugadores que miden más de 2.10 metros.
+4-Consultar los jugadores que miden mï¿½s de 2.10 metros.
 
  db.jugadores.find({"heightMeters":{$gt:"2.10"}}).sort({"heightMeters": -1}).pretty()
 
-5-Consultar el número de jugadores de cada posición.
+5-Consultar el nï¿½mero de jugadores de cada posiciï¿½n.
 
 db.jugadores.count({"pos":"C"}) --------56
 db.jugadores.count({"pos":"G"}) -------194
@@ -38,3 +38,83 @@ db.equipos.find({"isNBAFranchise": true}).pretty()
 8-Consultar los entrenadores principales, isAssistant: false
 
 db.entrenadores.find({"isAssistant": false}).pretty()
+
+9- Jugadores que han estado en los lakers pero ahora no
+
+db.jugadores.find({"teamId":{$ne:"1610612747"},"teams":{ $elemMatch:{teamId: "1610612747"}}}).pretty()
+
+10- Jugador con el pickNum = 1
+
+db.jugadores.find({"draft.pickNum":{$eq: '1'}}).pretty()
+
+11- Jugadores de los lakers con sus nombres en mayusulas
+
+db.jugadores.aggregate([
+{"$project":{"firstName":"$firstName", "lastName":{"$toUpper":"$lastName"}, "teamId":"$teamId"}},
+{"$match": {"teamId": {$eq:"1610612747"}}}])
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+1- Altura media y peso medio de los jugadores por cada equipo de la NBA.
+
+db.jugadores.aggregate(
+   [
+
+      {
+        $group : {
+           _id : { "teamId": "$teamId"},
+           "MediaAltura": { $avg:{$toDouble: "$heightMeters" }},
+  	   "MediaPeso": { $avg: {$toDouble: "$weightKilograms" }},
+           
+        }
+      }
+   ]
+).pretty()
+
+
+2- Nombre del jugador que mÃ¡s aÃ±os lleva en la NBA.
+
+db.jugadores.aggregate([{$match: {"nbaDebutYear": {$ne: ""}}}, 
+{$project: {"nbaDebutYear": {$toInt: "$nbaDebutYear"}, "firstName": "$firstName"}}, 
+{$group: {_id: null,"nbaDebutYear": {$min: "$nbaDebutYear"},"firstName": {$first: "$firstName"}}}])
+
+mongoimport --host localhost --port 27017 --db nba --collection calendario --file "D:\alex\Acceso_a_datos\nba\calendario.json"
+
+3- Partidos en los que el equipo visitante ha metido mÃ¡s de 100 puntos y no ha ganado.
+
+db.calendario.aggregate([{$project: {
+  "vTeam.score" : {$toInt : "$vTeam.score"},
+  "vTeam.loss" : 1,
+  "vTeam.teamId" : 1,
+  "vTeam.win" : 1
+}}, {$match: 
+{
+  "vTeam.score" : {$gt: 100},
+  "vTeam.loss" : "1",
+}}])
+
+
+4- Nombre, apellidos y Edad en aÃ±os de los jugadores, grabar el resultado en una colecciÃ³n nueva llamada jugadores_edad.
+
+
+
+5- Nombre, Apellido y posiciÃ³n del jugador de mayor y menor edad de la NBA.
+
+
+
+6- Paises de procedencia de los jugadores. Ordenar alfabÃ©ticamente.
+
+db.jugadores.aggregate([{$group: {_id: "$country",}}, {$sort: {_id: 1}}])
+
+
+7- Mostrar los jugadores que han estado en mÃ¡s equipos en su carrera. Limitar a 15 registros el resultado.
+
+db.jugadores.aggregate([{$project: {
+  firstName : 1,
+  lastName : 1,
+  "numberTeams" : {$size : "$teams"}
+}}, {$sort: {
+  "numberTeams": -1
+}}, {$limit: 15}])
